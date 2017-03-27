@@ -1,5 +1,13 @@
 Phumblr
 
+# ERDs, User Stories, and Wireframes
+
+http://i.imgur.com/ecllvpO.jpg
+
+http://i.imgur.com/nI2fd9v.jpg
+
+http://i.imgur.com/zQT4gXY.jpg
+
 # Authentication in Ember
 
 This training will involve a lot of following code and and exploring the

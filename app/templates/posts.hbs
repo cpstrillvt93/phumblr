@@ -1,0 +1,11 @@
+<h3>All Posts Page</h3>
+
+
+<ul>
+{{#each model as |post|}}
+  <li>{{post.title}}</li>
+  <li>>{{post.body}}</li>
+{{/each}}
+</ul>
+
+{{#link-to 'index'}}back{{/link-to}}
