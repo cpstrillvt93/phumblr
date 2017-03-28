@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('about');
+  this.route('post', { path: '/posts/post_id' });
   this.route('posts');
   this.route('new');
 
