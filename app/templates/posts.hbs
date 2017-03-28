@@ -1,11 +1,12 @@
-<h3>All Posts Page</h3>
+<h3>All Posts Page</h3>{{#link-to 'new' class='btn btn-default'}}Create Post{{/link-to}}
 
-
-<ul>
 {{#each model as |post|}}
+<ul>
   <li>{{post.title}}</li>
   <li>>{{post.body}}</li>
-{{/each}}
 </ul>
+{{/each}}
 
-{{#link-to 'index'}}back{{/link-to}}
+{{#link-to 'index' class='btn btn-default'}}back{{/link-to}}
+
+{{outlet}}

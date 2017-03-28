@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('about');
   this.route('posts');
+  this.route('new');
 
 });
 
