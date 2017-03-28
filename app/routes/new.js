@@ -12,5 +12,8 @@ export default Ember.Route.extend({
       post.save()
       .then(()=> this.transitionTo('posts'));
     },
+    cancel () {
+      history.back();
+    },
   }
 });
