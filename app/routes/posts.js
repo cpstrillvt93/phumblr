@@ -6,4 +6,9 @@ export default Ember.Route.extend({
     console.log(x);
     return this.get('store').findAll('post');
   },
+  actions: {
+    deletePost(post) {
+      post.destroyRecord();
+    }
+  }
 });

@@ -1,9 +1,8 @@
 <h3>Post Page</h3>
 
 <ul>
-  <li>{{post.title}}</li>
-  <li>>{{post.body}}</li>
-  <button class="btn btn-danger">Delete</button>
+  <li>{{model.title}}</li>
+  <li>>{{model.body}}</li>
   <button class="btn btn-danger">Update</button>
-  {{#link-to 'posts'}}Back{{/link-to}}
 </ul>
+{{#link-to 'posts'}}Back{{/link-to}}

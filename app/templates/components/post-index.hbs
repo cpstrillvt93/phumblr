@@ -1,0 +1,5 @@
+<div class="post-index">
+  <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
+  <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
+</div>
+{{outlet}}

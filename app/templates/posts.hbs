@@ -1,12 +1,6 @@
 <h3>All Posts Page</h3>{{#link-to 'new' class='btn btn-default'}}Create Post{{/link-to}}
-
 {{#each model as |post|}}
-<ul>
-  <li>{{post.title}}</li>
-  <li>>{{post.body}}</li>
-</ul>
+  {{post-index post=post deletePost='deletePost'}}
 {{/each}}
-
-{{#link-to 'index' class='btn btn-default'}}back{{/link-to}}
 
 {{outlet}}
