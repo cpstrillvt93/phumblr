@@ -1,10 +1,9 @@
 <div class="post-index">
   <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
+  {{user.post.id}}
+  {{#if post.editable}}
   <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
-  <button class="btn btn-default">
-    {{#link-to 'post.edit' post}}
-    Update{{/link-to}}
-  </button>
-
+  {{#link-to 'post.edit' post}}Update{{/link-to}}
+  {{/if}}
 </div>
 {{outlet}}
