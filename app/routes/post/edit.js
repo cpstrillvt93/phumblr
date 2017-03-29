@@ -5,6 +5,10 @@ export default Ember.Route.extend({
     editPost(post) {
       post.save()
       .then(() => this.transitionTo('posts'));
+    },
+    cancel() {
+      history.back();
     }
+
   }
 });
