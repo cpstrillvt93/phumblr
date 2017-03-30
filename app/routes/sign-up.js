@@ -8,7 +8,6 @@ export default Ember.Route.extend({
     signUp (credentials) {
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
-      .then(() => this.transitionTo('application'))
       .then(() => {
         credentials.password = null;
         credentials.email = null;

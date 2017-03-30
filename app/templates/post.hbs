@@ -1,9 +1,12 @@
 <h3 class="page-header">Phumbles</h3>
 
-<ul>
-  <li>{{model.title}}</li>
-  <li>>{{model.body}}</li>
-</ul>
+
+  <div class="jumbotron jumbotron-fluid">
+    <h2>{{model.title}}</h2>
+</div>
+<div class="jumbotron jumbotron-fluid">
+    <p>{{model.body}}</p>
+</div>
 {{#link-to 'posts'}}Back{{/link-to}}
 
 {{outlet}}

@@ -6,7 +6,7 @@
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
         {{#link-to "users" class='navbar-brand'}}Users{{/link-to}}
-        {{#link-to "posts" class='navbar-brand'}}Posts{{/link-to}}
+        {{#link-to "posts" class='navbar-brand'}}phumblePheed{{/link-to}}
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -14,8 +14,8 @@
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+        {{#link-to "sign-up" class='navbar-brand'}}Sign Up{{/link-to}}
+        {{#link-to "sign-in" class='navbar-brand'}}Sign In{{/link-to}}
         {{/if}}
       </ul>
     </div>

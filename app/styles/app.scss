@@ -1,2 +1,19 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+$container-green: rgb(83, 172, 83);
+$peach: rgb(217, 95, 99);
+.container-fluid {
+  background-color: $container-green;
+}
+
+.navbar-default .navbar-brand {
+  color: black;
+}
+
+.navbar-right .navbar-brand {
+  color: black;
+}
+
+.jumbotron-fluid {
+  background-color: white;
+}

@@ -6,12 +6,9 @@ export default Ember.Route.extend({
   userId: JSON.parse(window.localStorage.getItem('storage:auth')).id,
 
   model () {
-    if(this.get('isAuthenticated')) {
-      console.log(this.get('userId'));
-      return this.get('store').findAll('post');
-    } else {
-      this.transitionTo('posts');
-    }
+    let store = this.get('store');
+    store.unloadAll('post');
+    return store.findAll('post');
   },
   actions: {
     deletePost(post) {

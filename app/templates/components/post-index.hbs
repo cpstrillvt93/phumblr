@@ -1,9 +1,13 @@
 <div class="post-index">
-  <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
+  <div class="jumbotron jumbotron-fluid">
+    <h3 class="text-success">{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h3>
+
   {{user.post.id}}
   {{#if post.editable}}
   <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
-  {{#link-to 'post.edit' post}}Update{{/link-to}}
+  {{#link-to 'post.edit' post}}<button class="btn btn-primary">Update</button>{{/link-to}}
+  <div></div>
   {{/if}}
+  </div>
 </div>
 {{outlet}}
