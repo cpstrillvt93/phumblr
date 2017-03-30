@@ -25,8 +25,8 @@ export default Ember.Route.extend({
       let noContent = reason.errors && reason.errors.some((error) =>
         error.status === '404'
       );
-      let notOwner = reason.errors && reason.errors.some((error) =>
-        error.status === '403'
+      let emptyFields = reason.errors && reason.errors.some((error) =>
+        error.status === '422'
       );
       if (unauthorized) {
         this.get('flashMessages')
@@ -36,10 +36,10 @@ export default Ember.Route.extend({
           this.get('flashMessages')
           .danger('page does not exist');
           this.transitionTo('index');
-        } if (notOwner) {
-            this.get('flashMessages')
-            .danger('not yours');
-            this.transitionTo('index');
+      } if (emptyFields) {
+          this.get('flashMessages')
+          .danger('You must fill in both fields to create/edit a post');
+          this.transitionTo('index');
       } else {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');

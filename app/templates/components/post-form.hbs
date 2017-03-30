@@ -3,11 +3,14 @@
   {{input
   class="form-control"
   value=post.title
+  required="required"
   }}
 <lable>Body</lable>
-  {{input
+  {{textarea
   class="form-control"
   value=post.body
+  rows=20
+  required="required"
   }}
 
 <button class='btn btn-default' type='submit'>Submit</button>
