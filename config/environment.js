@@ -51,7 +51,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL ='/phumblr'
+    ENV.rootURL = '/phumblr'
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://lit-beyond-80860.herokuapp.com/';
   }
