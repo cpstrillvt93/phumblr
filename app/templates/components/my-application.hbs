@@ -4,25 +4,29 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
+
+
+        {{#link-to "posts" class='navbar-brand'}}phumblePheed{{/link-to}}
         {{#if isAuthenticated}}
-        {{#link-to "users" class='navbar-brand'}}Users{{/link-to}}
-        {{#link-to "posts" class='navbar-brand'}}Posts{{/link-to}}
+          {{#link-to 'new' class='navbar-brand'}}Create Post{{/link-to}}
+          {{#link-to "users" class='navbar-brand'}}Users{{/link-to}}
         {{/if}}
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+        {{#link-to "sign-up" class='navbar-brand'}}Sign Up{{/link-to}}
+        {{#link-to "sign-in" class='navbar-brand'}}Sign In{{/link-to}}
         {{/if}}
       </ul>
     </div>
   </div>
 </nav>
 
-<h1>Welcome to Ember!</h1>
+<h1 class="phumblr-header">Phumblr</h1>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}

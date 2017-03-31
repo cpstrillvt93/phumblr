@@ -3,8 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
-
   credentials: {},
+
+  init() {
+    this._super(...arguments);
+    this.set('credentials', {});
+  },
 
   actions: {
     submit () {
@@ -13,6 +17,7 @@ export default Ember.Component.extend({
 
     reset () {
       this.set('credentials', {});
+      history.back();
     },
   },
 });

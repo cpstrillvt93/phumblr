@@ -1,14 +1,20 @@
+
 <form class="form-group" {{action 'save' on='submit'}}>
 <lable>Title</lable>
   {{input
   class="form-control"
   value=post.title
+  required="required"
   }}
 <lable>Body</lable>
-  {{input
+  {{textarea
   class="form-control"
   value=post.body
+  rows=20
+  required="required"
+  spellcheck="spellcheck"
   }}
+
 
 <button class='btn btn-default' type='submit'>Submit</button>
 <button class='btn btn-danger' {{action 'cancel'}}>cancel</button>

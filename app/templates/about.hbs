@@ -1,11 +1,4 @@
-<h1>About Page</h1>
+<h3 class='page-header'>About</h3>
 
 
-<h2>This is my about page</h2>
-
-<ul>
-{{#each model as |user|}}
-  <li>{{user.email}}</li>
-{{/each}}
-</ul>
-{{#link-to 'index'}}back{{/link-to}}
+{{outlet}}

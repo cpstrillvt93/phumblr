@@ -1,5 +1,16 @@
 Phumblr
 
+## URLs
+
+https://cpstrillvt93.github.io/phumblr/
+
+https://lit-beyond-80860.herokuapp.com/
+
+https://github.com/cpstrillvt93/phumblr
+
+https://github.com/cpstrillvt93/phumblr-api
+
+
 # ERDs, User Stories, and Wireframes
 
 http://i.imgur.com/ecllvpO.jpg
@@ -8,26 +19,12 @@ http://i.imgur.com/nI2fd9v.jpg
 
 http://i.imgur.com/zQT4gXY.jpg
 
-# Authentication in Ember
 
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
+## Preparation and Installation Instructions
 
-## Prerequisites
+Install the latest version of Ember. See Ember's documentation for step-by-step instructions.
 
--   [Ember Resources](https://github.com/ga-wdi-boston/ember-resources)
-
-## Objectives
-
-By the end of this, developers should be able to:
-
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
-
-## Preparation
-
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone]
     this repository.
 1.  Install dependencies with `npm install` and `bower install`.
 1.  Start any API based on a recent version of the [Rails API
@@ -36,47 +33,18 @@ By the end of this, developers should be able to:
     Template](https://github.com/ga-wdi-boston/express-api-template).
 1.  Start the front-end server with `ember server`.
 
-## From end to end
 
-Watch as I sign up for a new account on our demo app.
+## Technologies Used
 
-*Other than the flash messages on the page, did anything change?  What about in
-the Chrome Developer Tools?*
+To develop this appilication, I used Ember.js as a front-end framework and Ruby on Rails as a back-end server. Additionally, this app was created using several NPM packages and Bootstrap/SASS for styling.
 
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
+## Approach
 
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it's implemented.
+I started the project by focusing on my user storires, my ERD, and scoping my project down to something that I was confident I could accomplish in the alotted time. To start off on the right foot, I deployed both my heroku back-end and the ember auth template. With slightly more experience using Rails than ember, I decided it would be best to get my rails server up and running first. Though it took longer than the last time I used rails, I was able to get all my curl scripts running within a day and a half. I then moved on to my first ember experience.
 
-## Follow Along
+Similar to how I approached using the browser-template, I first broke ember down into a diagram so that I could at least go into building my application with something to go off of. My first goal was to get phumblr crudding. Unlike using the browser template however, this was much easier with ember, as it seemed to seemelessly pull the data from my server. The 'magic' aspect of Ember certainly caused quite a few mishaps and frustrating bugs, however I am happy I decided to give it a try.
 
-Let's walk through file by file to see what's happening.  I will ask
-developers to guide me through the files while correcting any misunderstandings.
 
-First let's start down the template and component trail, then we'll work our way
-up with actions.
+## Major Hurdles/Unsolved Problems
 
-*Remember: Data down, actions up.*
-
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
-
-## Additional Resources
-
--   [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an
-    API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+Getting around the ember stuff that I did(and may still) not understand was probably made up the majority of the largest hurdles I made. When I had code that to me looked perfect, or at least should have worked, I spent hours combing through it, only to find that it was one parameter being required in my back-end, or a '/' precedeing my 'page-not-found' route. While I am proud of my ability to learn a front-end framework like Ember, I definitely felt a bit discouraged at certain times throughout the framework-learning proccess. I plan to continue working on this app after GA ends.

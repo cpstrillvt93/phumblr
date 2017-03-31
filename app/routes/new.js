@@ -1,14 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   model () {
-    console.log("got to new posts model")
-    return this.get('store').createRecord('post', {});
+    if(this.get('isAuthenticated')) {
+      return this.get('store').createRecord('post');
+    } else {
+      this.transitionTo('page-not-found');
+    }
+
   },
   actions: {
     createPost (post) {
-      console.log(post);
-      console.log('got to createPost');
       post.save()
       .then(()=> this.transitionTo('posts'));
     },

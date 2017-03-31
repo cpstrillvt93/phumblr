@@ -1,9 +1,15 @@
 <div class="post-index">
-  <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
-  {{user.post.id}}
-  {{#if post.editable}}
-  <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
-  {{#link-to 'post.edit' post}}Update{{/link-to}}
-  {{/if}}
-</div>
+  <div class="jumbotron jumbotron-fluid">
+    <h2 class="text-center">{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h2>
+  <div class='row'>
+    <div class='col-md-3'>
+      {{user.post.id}}
+      {{#if post.editable}}
+        <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
+          {{#link-to 'post.edit' post}}<button class="btn btn-primary">Update</button>{{/link-to}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
 {{outlet}}
