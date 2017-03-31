@@ -2,6 +2,13 @@
 @import 'bootstrap/theme';
 $container-green: rgb(83, 172, 83);
 $peach: rgb(217, 95, 99);
+
+
+
+.navbar {
+  background-color: grey;
+}
+
 .container-fluid {
   background-color: $container-green;
 }
@@ -20,6 +27,5 @@ $peach: rgb(217, 95, 99);
 }
 
 .post-index {
-  width: 25%;
-  float: left;
+  width: 50%;
 }
