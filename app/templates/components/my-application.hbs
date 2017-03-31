@@ -5,8 +5,12 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
 
-        {{#link-to "users" class='navbar-brand'}}Users{{/link-to}}
+
         {{#link-to "posts" class='navbar-brand'}}phumblePheed{{/link-to}}
+        {{#if isAuthenticated}}
+          {{#link-to 'new' class='navbar-brand'}}Create Post{{/link-to}}
+          {{#link-to "users" class='navbar-brand'}}Users{{/link-to}}
+        {{/if}}
 
       </ul>
       <ul class="nav navbar-nav navbar-right">

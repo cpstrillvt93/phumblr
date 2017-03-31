@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
+  auth: Ember.inject.service(),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   model () {
-    return this.get('store').createRecord('post');
+    if(this.get('isAuthenticated')) {
+      return this.get('store').createRecord('post');
+    } else {
+      this.transitionTo('page-not-found');
+    }
+
   },
   actions: {
     createPost (post) {

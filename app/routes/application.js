@@ -31,13 +31,12 @@ export default Ember.Route.extend({
         this.get('flashMessages')
         .danger('You must be authenticated to access this page.');
         this.transitionTo('/sign-up');
-      } else if (noContent) {
-          this.get('flashMessages')
-          .danger('does not exist');
-          this.transitionTo('index');
       } else {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
+      }
+      if(noContent) {
+        this.transitionTo('/page-not-found');
       }
 
       return false;

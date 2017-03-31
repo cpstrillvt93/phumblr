@@ -1,8 +1,7 @@
 <h3 class="page-header">phumbles</h3>
 
-{{#if 'isAuthenticated'}}
-{{#link-to 'new' class='btn btn-default'}}Post{{/link-to}}
-{{/if}}
+
+
 
 
 {{#each model as |post|}}
@@ -10,3 +9,5 @@
   {{post-index post=post deletePost='deletePost'}}
 
 {{/each}}
+
+{{outlet}}
