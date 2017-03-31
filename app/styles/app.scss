@@ -3,10 +3,16 @@
 $container-green: rgb(83, 172, 83);
 $peach: rgb(217, 95, 99);
 
-
+h2 {
+  font-size: 50px;
+}
 
 .navbar {
   background-color: grey;
+}
+
+.btn {
+  float:left;
 }
 
 .container-fluid {
@@ -15,6 +21,7 @@ $peach: rgb(217, 95, 99);
 
 .navbar-default .navbar-brand {
   color: black;
+
 }
 
 .navbar-right .navbar-brand {

@@ -19,9 +19,9 @@
           <div>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</div>
           {{user.post.id}}
           {{#if post.editable}}
-            <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
+            <div><button class="btn btn-danger btn-sm" {{action 'deletePost'}}>Delete</button></div>
             {{#link-to 'post.edit' post}}
-            <button class="btn btn-primary">Update</button>
+            <div><button class="btn btn-primary btn-sm">Update</button></div>
             {{/link-to}}
           {{/if}}
   </div>
