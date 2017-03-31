@@ -10,14 +10,12 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('about');
   this.route('posts');
   this.route('new');
   this.route('post', { path: '/posts/:post_id' }, function() {
     this.route('edit');
   });
-  this.route('catchall', { path: '/*wildcard' });
-
+  this.route('page-not-found', { path: '/*wildcard' });
 });
 
 export default Router;

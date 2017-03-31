@@ -19,26 +19,21 @@ export default Ember.Route.extend({
     },
 
     error (reason) {
+      // console.log('error', reason);
       let unauthorized = reason.errors && reason.errors.some((error) =>
         error.status === '401'
       );
       let noContent = reason.errors && reason.errors.some((error) =>
         error.status === '404'
       );
-      let emptyFields = reason.errors && reason.errors.some((error) =>
-        error.status === '422'
-      );
+
       if (unauthorized) {
         this.get('flashMessages')
         .danger('You must be authenticated to access this page.');
-        this.transitionTo('/sign-in');
-      } if (noContent) {
+        this.transitionTo('/sign-up');
+      } else if (noContent) {
           this.get('flashMessages')
-          .danger('page does not exist');
-          this.transitionTo('index');
-      } if (emptyFields) {
-          this.get('flashMessages')
-          .danger('You must fill in both fields to create/edit a post');
+          .danger('does not exist');
           this.transitionTo('index');
       } else {
         this.get('flashMessages')

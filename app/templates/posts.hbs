@@ -1,7 +1,8 @@
 <h3 class="page-header">phumbles</h3>
-{{auth-router}}
 
+{{#if 'isAuthenticated'}}
 {{#link-to 'new' class='btn btn-default'}}Post{{/link-to}}
+{{/if}}
 
 
 {{#each model as |post|}}
