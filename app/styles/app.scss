@@ -2,12 +2,26 @@
 @import 'bootstrap/theme';
 $container-green: rgb(83, 172, 83);
 $peach: rgb(217, 95, 99);
+
+h2 {
+  font-size: 50px;
+}
+
+.navbar {
+  background-color: grey;
+}
+
+.btn {
+  float:left;
+}
+
 .container-fluid {
   background-color: $container-green;
 }
 
 .navbar-default .navbar-brand {
   color: black;
+
 }
 
 .navbar-right .navbar-brand {
@@ -20,6 +34,5 @@ $peach: rgb(217, 95, 99);
 }
 
 .post-index {
-  width: 25%;
-  float: left;
+  width: 50%;
 }
